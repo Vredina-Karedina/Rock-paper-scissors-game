@@ -1,0 +1,279 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100vh;
+  width: 100vw;
+  background: url("images/background.png");
+  background-size: 100% 100%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ---------Player sections--------- */
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.left-player, .right-player{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 270px;
+}
+
+.left-player img {
+  width: 360px;
+  height: auto;
+}
+
+.right-player {
+  font-size: 100px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+}
+
+.left-palm,
+.right-palm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.left-palm-img,
+.right-palm-img {
+  --rotateLeftHand: 40deg;
+  --rotateRightHand: -40deg;
+
+  height: auto;
+  width: 250px;
+  transition: all 1s;
+}
+
+.left-palm-img {
+  transform: rotate(var(--rotateLeftHand));
+}
+
+.right-palm-img {
+  transform: rotate(var(--rotateRightHand));
+}
+
+
+
+/* ---------Playground section--------- */
+
+.playground {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+flex: 0 0 auto;
+}
+
+h1 {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+}
+
+.game-activity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  height: 200px;
+  width: 700px;
+  margin: 30px;
+  padding: 20px;
+  font-size: 30px;
+  white-space: pre-wrap;
+  text-align: center;
+  line-height: 1.5;
+  background-color: #0078d0;
+  border-radius: 5px;
+  box-shadow:
+    /* inner shadow */
+    inset 4px 7px 10px rgba(0, 0, 0, .2),
+    /* top shadow */
+    0px -5px 3px rgba(0, 0, 0, .2),
+    /* bottom shadow */
+    0px 5px 3px rgba(255, 255, 255, .3),
+    /* left shadow */
+    -5px 0px 3px rgba(0, 0, 0, .2),
+    /* right shadow */
+    5px 0px 3px rgba(255, 255, 255, .2);
+}
+
+.rules-text {
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+
+
+/* ---------BUTTONS--------- */
+
+.display-buttons {
+  width: 620px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.display-buttons button {
+  width: 150px;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 25px;
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 10px;
+  box-shadow:
+    /* inner top*/ inset rgba(255, 255, 255, .45) 0 8px 4px 1px,
+    /* inner bottom*/ inset rgba(6, 0, 83, .45) 0 -8px 4px 1px,
+    /* inner left*/ inset rgba(255, 255, 255, .3) 8px 0 4px 1px,
+    /* inner right*/ inset rgba(6, 0, 83, .3) -8px 0 4px 1px,
+    /* bottom */ rgba(0, 0, 0, .6) 0 4px 10px,
+    /* bottom */ rgba(0, 0, 0, .3) 0 2px 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: all .3s;
+}
+
+.display-buttons button::after {
+  background-image: radial-gradient(#fff 0, rgba(255, 255, 255, 0) 50%);
+  border-radius: 10px;
+  content: "";
+  height: 30%;
+  width: 15%;
+  left: -7px;
+  top: -1px;
+  opacity: .6;
+  position: absolute;
+  transform: rotate(-35deg);
+  transition: all .3s;
+}
+
+.display-buttons button:hover {
+  box-shadow:
+    /* inner top*/ inset rgba(255, 255, 255, .45) 0 8px 4px 1px,
+    /* inner bottom*/ inset rgba(6, 0, 83, .45) 0 -8px 4px 1px,
+    /* inner left*/ inset rgba(255, 255, 255, .3) 8px 0 4px 1px,
+    /* inner right*/ inset rgba(6, 0, 83, .3) -8px 0 4px 1px,
+    /* bottom */ rgba(49, 49, 49, 0.8) 0 2px 5px,
+    /* bottom */ rgba(0, 0, 0, .2) 0 4px 10px;
+  transform: scale(0.95);
+  transition: all .3s;
+}
+
+.display-buttons button:active {
+  box-shadow:
+    /* inner top*/ inset rgba(255, 255, 255, .45) 0 8px 4px 1px,
+    /* inner bottom*/ inset rgba(6, 0, 83, .45) 0 -8px 4px 1px,
+    /* inner left*/ inset rgba(255, 255, 255, .3) 8px 0 4px 1px,
+    /* inner right*/ inset rgba(6, 0, 83, .3) -8px 0 4px 1px,
+    /* bottom */ rgba(49, 49, 49, 0.8) 0 2px 5px,
+    /* bottom */ rgba(0, 0, 0, .2) 0 4px 10px,
+    /* glow */ #ffc600 0 0 1rem;
+  transform: scale(0.95);
+  transition: all .3s;
+}
+
+.buttons {
+  display: flex;
+  gap: 80px;
+}
+
+.buttons img {
+  max-width: 85px;
+  max-height: auto;
+}
+
+.buttons button {
+  width: 150px;
+  height: 150px;
+  background-color: #0078d0;
+  background-image: radial-gradient(#0078d0 58%, #00004d);
+  border: 0;
+  border-radius: 50%;
+  box-shadow:
+  /* inner */ inset rgba(255, 255, 255, .45) 4px 8px 4px 1px,
+  /* inner */ inset rgba(6, 0, 83, 0.3) -4px -8px 4px 1px,
+  /* bottom */ 0 4px 10px rgba(0, 0, 0, .6),
+  /* bottom */ 0 2px 4px rgba(0, 0, 0, .2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  outline: 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: all .3s;
+}
+
+.buttons button::before {
+  background-image: radial-gradient(#fff 0, rgba(255, 255, 255, 0) 50%);
+  border-radius: 125px;
+  content: "";
+  height: 15%;
+  width: 50%;
+  left: -7px;
+  top: 10px;
+  opacity: .6;
+  position: absolute;
+  transform: rotate(-35deg);
+  transition: all .3s;
+}
+  
+.buttons button:hover,
+:disabled {
+  box-shadow:
+  /* inner */ inset rgba(255, 255, 255, .35) 4px 8px 4px 1px,
+  /* inner */ inset rgba(6, 0, 83, 0.2) -4px -8px 4px 1px,
+  /* bottom */ rgba(49, 49, 49, 0.8) 0 2px 5px,
+  /* bottom */ rgba(0, 0, 0, .2) 0 4px 10px;
+  transform: scale(0.95);
+  transition: all .3s;
+}
+
+.buttons button:active {
+  box-shadow:
+  /* inner top */ inset rgba(255, 255, 255, .45) 0 8px 4px 1px,
+  /* inner bottom */ inset rgba(6, 0, 83, .45) 0 -8px 4px 1px,
+  /* inner left */ inset rgba(255, 255, 255, .3) 8px 0 4px 1px,
+  /* inner right */ inset rgba(6, 0, 83, .3) -8px 0 4px 1px,
+  /* bottom */ 0 0 1rem #ffc600,
+  /* bottom */ rgba(255, 251, 0, 0.2) 0 4px 10px;
+  transform: scale(0.95);
+  transition: all .3s;
+}

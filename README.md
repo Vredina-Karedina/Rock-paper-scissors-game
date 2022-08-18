@@ -1,5 +1,8 @@
-# Rock-paper-scissors-game
-The game rules:
-A simultaneous, zero-sum game, it has three possible outcomes: a draw, a win or a loss.
-A player who decides to play rock will beat another player who has chosen scissors ("rock crushes scissors" or "breaks scissors" or sometimes "blunts scissors"[4]), but will lose to one who has played paper ("paper covers rock"); a play of paper will lose to a play of scissors ("scissors cuts paper").
-If both players choose the same shape, the game is tied and is usually immediately replayed to break the tie.
+Rock-paper-scissors-game page was created for educational purposes.
+
+All pictures used on the page are allowed for non-commercial purposes. Sourses:
+https://www.vecteezy.com/vector-art/3027817-rock-paper-scissors-hand-gesture
+https://www.freepnglogos.com/images/laptop-10697.html
+https://www.onlinewebfonts.com/icon/371615
+https://www.onlinewebfonts.com/icon/438725
+https://www.onlinewebfonts.com/icon/134895
